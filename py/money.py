@@ -2,6 +2,9 @@ class Money:
     def __init__(self, amount, currency):
         self.amount = amount
         self.currency = currency
+
+    def __str__(self):
+        return "%s %0.2f" % (self.currency, self.amount)
     
     def times(self, multiplier):
         return Money(self.amount * multiplier, self.currency)
